@@ -30,6 +30,8 @@ const history = {
 
 const eventHandler = new EventHandler(dependencies)
 
+eventHandler.correlationId = 'CORRELATION-ID'
+
 eventHandler
     .handle(new PassageIdentified(transactionToll, history))
     .handle(new OutputIdentified(transactionParking, history))
